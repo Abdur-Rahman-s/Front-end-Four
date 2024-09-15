@@ -31,9 +31,9 @@ export function Calculator() {
         const buttons = document.querySelectorAll('button');
         const display = document.querySelector('.display');
         const mainContainer = document.querySelector('.main-container');
-        const headerText = document.querySelector('p')
+        const headerText = document.querySelectorAll('.Text')
 
-        let backgroundColor, btnShadow, textColor, displayBg, displayColor, containerColor , hcolor;
+        let backgroundColor, btnShadow, textColor, displayBg, displayColor, containerColor, hcolor;
 
         if (togglePosition === 1) {
             backgroundColor = '#E5E4E0';
@@ -67,10 +67,14 @@ export function Calculator() {
             btn.style.boxShadow = btnShadow;
             btn.style.color = textColor;
         });
+        headerText.forEach((element) => {
+            element.style.color = hcolor;
+        });
+
         display.style.backgroundColor = displayBg;
         display.style.color = displayColor;
         mainContainer.style.backgroundColor = containerColor;
-        headerText.style.color = hcolor;
+
     }
 
     function insertValue(e) {
@@ -96,10 +100,13 @@ export function Calculator() {
     return (
         <>
             <div className="header" >
-                <p >Calc</p>
+                <p className="Text" >Calc</p>
+
+
                 <div id="switchBtn">
-                <div className={`switch toggle-${togglePosition}`} onClick={handleToggle}></div>
-            </div>
+                    <span className="Text">THEME</span> <span className="toggleNumber Text">1  2  3</span> 
+                    <div className={`switch toggle-${togglePosition}`} onClick={handleToggle}></div>
+                </div>
             </div>
             <div className="display">{values}</div>
             <div className="main-container">

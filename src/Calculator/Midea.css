@@ -37,6 +37,70 @@
     }
 }
 
+/* Media query for mobile screens */
+@media only screen and (max-width: 600px) {
+    .main-container {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .header {
+        font-size: 18px;
+    }
+
+    .display {
+        height: 70px;
+        font-size: 28px;
+        padding: 10px;
+    }
+
+    button {
+        margin: 5px;
+        width: 60px;
+        font-size: 16px;
+    }
+
+    .switch {
+        width: 3.5rem;
+        height: 1.2rem;
+    }
+
+    .switch::after {
+        width: 1rem;
+        height: 1rem;
+        transform: translateX(0);
+    }
+
+    .toggle-1::after {
+        transform: translateX(1.3rem);
+    }
+
+    .toggle-2::after {
+        transform: translateX(2.5rem);
+    }
+
+    .reset-equal {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .equal, #btn {
+        width: 100%;
+    }
+}
+
+/* Media query for tablets and small desktops */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    button {
+        width: 70px;
+        font-size: 18px;
+    }
+
+    .display {
+        font-size: 36px;
+    }
+}
+
 @media (max-width: 480px) {
     button {
         width: 60px;
