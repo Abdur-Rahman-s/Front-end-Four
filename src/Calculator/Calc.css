@@ -1,0 +1,130 @@
+
+
+body {
+    background-color: hsl(222, 26%, 31%);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    background-color: hsl(223, 31%, 20%);
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    color: #FFFF;
+    font-weight: 900;
+}
+
+.display {
+    height: 90px;
+    width: 100%;
+    background-color: hsl(224, 36%, 15%);
+    border-radius: 8px;
+    color: #FFFF;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+button {
+    margin: 7px;
+    width: 80px;
+    color: hsl(221, 14%, 31%);
+    /* Text color */
+    border: none;
+    outline: none;
+    background-color: #EAE3DB;
+    /* Key background */
+    font-weight: 900;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px #A99E9D;
+    /* Key shadow */
+    cursor: pointer;
+}
+
+
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.allBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#btn {
+    width: 48%;
+}
+
+.equal {
+    width: 48%;
+    border: none;
+    outline: none;
+}
+
+.reset-equal {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#switchBtn {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 5rem;
+    height: 1.5rem;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.switch::after {
+    content: '';
+    position: absolute;
+    top: .1rem;
+    left: .1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #F86C5D;
+    border-radius: 50%;
+    transition: all 0.3s linear;
+}
+
+.toggle-0::after {
+    transform: translateX(0);
+}
+
+.toggle-1::after {
+    transform: translateX(1.7rem);
+    background-color: hsl(25, 98%, 40%);
+}
+.toggle-2::after {
+    transform: translateX(3.5rem);
+    background-color: hsl(176, 100%, 44%);
+}
